@@ -22,7 +22,7 @@ ul {  list-style-type: none; }
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(m.png);
+  background-image: url(./m.png);
   background-size: cover;
   background-attachment: fixed;
   background-position: center top;
@@ -350,14 +350,14 @@ section{
     position: relative;
     width: 40px;
     height: 40px;
-    background: url(menu.png);
+    background: url(./menu.png);
     background-size: 30px;
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
   }
   .menuToggle.active {
-    background: url(close.png);
+    background: url(./close.png);
     background-size: 25px;
     background-repeat: no-repeat;
     background-position: center;
