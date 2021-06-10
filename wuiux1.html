@@ -1,0 +1,74 @@
+<!DOCTYPE html><!--22061086_이나경-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NArchive</title>
+    <link rel="stylesheet" type="text/css" href="uiux.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo"><span>NA</span>rchive</a>
+      <div class="menuToggle" onclick="toggleMenu();"></div>
+      <ul class="nav">
+        <li><a href="about.html" onclick="toggleMenu();">About</a></li>
+        <li><a href="work.html" onclick="toggleMenu();">Work</a></li>
+      </ul>
+    </header>
+
+    <main>
+      <section class="banner" id="banner">
+        <div class="content">
+          <h2>Payco App Icon Renewal</h2>
+          <p>개인프로젝트 <br> 페이코 어플 내 아이콘 이미지 개선</p>
+        </div>
+      </section>
+
+      <aside id="side">
+        <ul class="menu">
+          <li class="menu_item"><a href="wweb.html">WEB</a></li>
+          <li class="menu_item"><a href="wp.html">PROJECT</a></li>
+          <li class="menu_item"><a href="wvc1.html">VISUAL</a>
+            <ul class="menu_sub">
+              <li><a href="wvc1.html">산돌</a></li>
+              <li><a href="wvc2.html">GOTHAM</a></li>
+            </ul>
+          </li>
+          <li class="menu_item"> <a href="#">UIUX</a>
+            <ul class="menu_sub">
+              <li><a href="wuiux1.html">Payco</a></li>
+              <li><a href="wuiux2.html">Ediya</a></li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="work">
+          <div class="imgbox"><img class="simg" src="uiux/1.png"></div>
+          <div class="imgbox"><img class="simg" src="uiux/2.png"></div>
+          <div class="imgbox"><img class="simg" src="uiux/3.png"></div>
+          <div class="imgbox"><img class="simg" src="uiux/4.png"></div>
+          <div class="imgbox"><img class="simg" src="uiux/5.png"></div>
+      </section>
+      <div class="imgbox"><img class="simg" src="uiux/6.png"></div>
+      <div class="imgbox"><img class="simg" src="uiux/7.png"></div>
+      <div class="imgbox"><img class="simg" src="uiux/8.png"></div>
+    </main>
+
+
+    <script type="text/javascript">
+      window.addEventListener('scroll',function(){
+        const header = document.querySelector('header');
+        header.classList.toggle("sticky",window.scrollY > 0);
+      });
+
+      function toggleMenu(){
+        const menuToggle = document.querySelector('.menuToggle');
+        const nav = document.querySelector('.nav');
+        menuToggle.classList.toggle('active');
+        nav.classList.toggle('active');
+      }
+    </script>
+  </body>
+</html>

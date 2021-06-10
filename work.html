@@ -1,0 +1,94 @@
+<!DOCTYPE html><!--22061086_이나경-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NArchive</title>
+    <link rel="stylesheet" type="text/css" href="work.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo"><span>NA</span>rchive</a>
+      <div class="menuToggle" onclick="toggleMenu();"></div>
+      <ul class="nav">
+        <li><a href="about.html" onclick="toggleMenu();">About</a></li>
+        <li><a href="work.html" onclick="toggleMenu();">Work</a></li>
+      </ul>
+    </header>
+
+    <section class="expert" id="expert">
+
+      <div class="content">
+        <a href="wweb.html">
+          <div class="box" id="box1">
+          <div class="imgBx">
+            <img src="img/wg4.png">
+          </div>
+          <div class="text">
+            <h3>20-21 NArchive</h3>
+          </div>
+        </div></a>
+       <a href="wvc1.html">
+        <div class="box" id="box2">
+          <div class="imgBx">
+            <img src="img/wg6.png">
+          </div>
+          <div class="text">
+            <h3>Sandoll 고딕Neo1 에세이</h3>
+          </div>
+        </div></a>
+        <a href="wvc2.html">
+        <div class="box" id="box3">
+          <div class="imgBx">
+            <img src="img/wg5.png">
+          </div>
+          <div class="text">
+            <h3>GOTHAM <br>에세이</h3>
+          </div>
+        </div></a>
+       <a href="wuiux1.html">
+        <div class="box" id="box4">
+          <div class="imgBx">
+            <img src="img/wg1.png">
+          </div>
+          <div class="text">
+            <h3>Payco Icon Renewal</h3>
+          </div>
+        </div></a>
+      <a href="wuiux2.html">
+          <div class="box" id="box5">
+          <div class="imgBx">
+            <img src="img/wg2.png">
+          </div>
+          <div class="text">
+            <h3>Ediya Icon Renewal</h3>
+          </div>
+        </div></a>
+        <a href="wp.html">
+        <div class="box" id="box6">
+          <div class="imgBx">
+            <img src="img/wg3.png">
+          </div>
+          <div class="text">
+            <h3>SORO Project</h3>
+          </div>
+        </div></a>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+      window.addEventListener('scroll',function(){
+        const header = document.querySelector('header');
+        header.classList.toggle("sticky",window.scrollY > 0);
+      });
+
+      function toggleMenu(){
+        const menuToggle = document.querySelector('.menuToggle');
+        const nav = document.querySelector('.nav');
+        menuToggle.classList.toggle('active');
+        nav.classList.toggle('active');
+      }
+    </script>
+  </body>
+</html>

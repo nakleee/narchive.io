@@ -1,0 +1,426 @@
+/*orange: #FB4C03 rgba(251, 76, 3, 1)
+/ blue: #53CBE7 rgba(83, 203, 231, 1)
+/ white : #FBFBFB / 'MADE Bon Voyage';*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nanum Myeongjo', serif;
+  scroll-behavior: smooth;
+}
+a{  text-decoration: none; }
+p {
+  font-weight: 400;
+  color: #111;
+}
+ul {  list-style-type: none; }
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(img/m.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+.banner .content {
+  max-width: 900px;
+  text-align: center;
+}
+.banner .content .imgBx img {
+  width: 100%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.banner .content h2 {
+  font-size: 4em;
+  padding-bottom: 20px;
+  color: #fff;
+  font-weight: 800;
+}
+.banner .content p {
+  width: 100%;
+  font-size: 1.2em;
+  line-height:1.8em;
+  color: #fff;
+  font-weight: 700;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 200;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s
+}
+header.sticky {
+  background: #fff;
+  padding: 10px 100px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+header .logo{
+  font-family: 'MADE Bon Voyage';
+  color: #fff;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+}
+header.sticky .logo {
+  color:#111;
+}
+header .logo span {
+  color: #FB4C03;
+}
+header .nav {
+  position: relative;
+  display: flex;
+}
+header .nav li {
+  font-size: 1.3em;
+  list-style: none;
+  margin-left: 30px;
+}
+header .nav li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+}
+header.sticky .nav li a {
+  color:#111;
+}
+header.sticky .nav li a:hover {
+  color:#FB4C03;
+}
+section{
+  padding: 100px;
+}
+
+.row{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.row .col150 {
+  position: relative;
+  width: 48%;
+  line-height: 2.4em;
+}
+.titleText {
+  color: #111;
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.titleText span {
+  color: #FB4C03;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+#title_p {
+  font-weight: 700;
+}
+.row .col150 .imgBx {
+  position: relative;
+  width: 100%;
+  /*min-height: 300px;*/
+  height:100%;
+}
+.row .col150 .imgBx img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 120%;
+  object-fit: contain;
+  padding-bottom: 25px;
+}
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.expert .content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 40px;
+}
+.expert .content .box {
+  width: 300px;
+  margin: 30px;
+}
+.expert .content .box .imgBx {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+.expert .content .box .imgBx img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.expert .content .box .text {
+  padding: 15px 0 5px;
+}
+.expert .content .box .text h3 {
+  font-weight: 700;
+  color:#111;
+}
+.temp {
+  background: #FBFBFB;
+}
+.white .titleText,.white p {
+  color: #111;
+}
+.temp .content {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  margin-top: 30px;
+}
+.temp .content .skillbar {
+  width: 600px;
+  background: #fff;
+  border-radius: 10px;
+  padding:25px 30px;
+  box-shadow:5px rgba(0, 0, 0, 0.1);
+}
+.temp .content .skillbar .bar {
+  margin: 20px 0;
+}
+.temp .content .skillbar .bar:first-child {
+  margin-top: 0px;
+}
+.temp .content .skillbar .bar .info  {
+  margin-bottom: 10px;
+}
+.temp .content .skillbar .bar .info span {
+  font-size: 1em;
+  font-weight: 700;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+.temp .content .skillbar .bar .line {
+  position: relative;
+  height: 10px;
+  width: 100%;
+  background:#f3f3f3;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  -webkit-animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05),
+  0px 1px rgba(255, 255, 255, 0.8);
+}
+.temp .content .skillbar .bar .line span {
+  height: 100%;
+  width: 80%;
+  background: #53CBE7;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  -webkit-animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@-webkit-keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.temp .content .skillbar .bar .line.ps span{
+  width: 90%;
+}
+.temp .content .skillbar .bar .line.ai span {
+  width: 85%;
+}
+.temp .content .skillbar .bar .line.xd span {
+  width: 95%;
+}
+.temp .content .skillbar .bar .line.html span{
+  width: 80%;
+}
+.temp .content .skillbar .bar .line.css span{
+  width: 75%;
+}
+.temp .content .skillbar .bar .line.ae span {
+  width: 70%;
+}
+.temp .content .skillbar .bar .line span::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: -10px;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+.temp .content .skillbar .bar .line span::after {
+  position: absolute;
+  content: "80%";
+  right: 0;
+  top: -20px;
+  background: #000;
+  color: #fff;
+  font-size: 0.5em;
+  font-weight: 700;
+  padding: 1px 8px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+@keyframes showText2 {
+  100% {
+    opacity: 1;
+  }
+}
+.temp .content .skillbar .bar .line.ps span::after {
+  content: "90%";
+}
+.temp .content .skillbar .bar .line.ai span::after {
+  content: "85%";
+}
+.temp .content .skillbar .bar .line.xd span::after {
+  content: "95%";
+}
+.temp .content .skillbar .bar .line.html span::after {
+  content: "80%";
+}
+.temp .content .skillbar .bar .line.css span::after {
+  content: "75%";
+}
+.temp .content .skillbar .bar .line.ae span::after {
+  content: "70%";
+}
+
+@media (max-width:991px) {
+  header,
+  header.sticky{
+    padding: 10px 20px;
+  }
+  header .nav {
+    display: none;
+  }
+  header .nav.active {
+    width: 100%;
+    height: calc(100% - 60px);
+    position: fixed;
+    top: 60px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #53CBE7;
+  }
+  header .nav li {
+    margin-left: 0;
+  }
+  header .nav li a {
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 1.6em;
+    font-size: 800;
+  }
+  .menuToggle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: url(img/menu.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+  .menuToggle.active {
+    background: url(img/close.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  header.sticky .menuToggle {
+    filter: invert(1);
+  }
+  section {
+    padding: 20px;
+  }
+  .banner .content h2 {
+    padding: 20px;
+    font-size: 3em;
+    color: #fff;
+  }
+  .banner .content p {
+    font-size: 0.9em;
+    line-height:1.1em;
+    color: #fff;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .row .col150 {
+    position: relative;
+    width: 100%;
+  }
+  .row .col150 .imgBx{
+    height: 300px;
+    margin-top: 20px
+  }
+  .menu .content {
+    margin-top: 20px;
+  }
+  .menu .content .box {
+    margin: 10px;
+  }
+  .menu .content .box .imgBx {
+    height: 260px;
+  }
+  .title {
+    text-align: center;
+  }
+  .titleText {
+    font-size: 1.8em;
+    line-height: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 400;
+    text-align: center;
+  }
+  .temp .content {
+    padding: 0 5%;
+    margin-bottom: 100px;
+  }
+  .temp .content .box {
+    margin: 10px;
+    padding: 20px;
+  }
+}
+}
+@media (max-width:480px){
+  .banner .content h2 {
+    font-size: 2.2em;
+    color: #fff;
+  }
+}

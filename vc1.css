@@ -1,0 +1,357 @@
+/*orange: #FB4C03 rgba(251, 76, 3, 1)
+/ blue: #53CBE7 rgba(83, 203, 231, 1)
+/ white : #FBFBFB / 'MADE Bon Voyage';*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nanum Myeongjo', serif;
+  scroll-behavior: smooth;
+}
+a{  text-decoration: none; }
+p {
+  font-weight: 400;
+  color: #111;
+}
+ul {  list-style-type: none; }
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  background-image: url(img/vc1.png);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.banner .content {
+  max-width: 900px;
+  left: 0;
+  padding-top: 340px;
+}
+.banner .content .imgBx img {
+  width: 100%;
+  position: relative;
+  justify-content: center;
+}
+.banner .content h2 {
+  font-size: 2.5em;
+  padding-bottom: 20px;
+  color: #0592f4;
+  text-align: left;
+  font-weight: 800;
+}
+.banner .content p {
+  width: 100%;
+  font-size: 1.2em;
+  line-height:1.8em;
+  color: #fff;
+  font-weight: 700;
+  text-align: left;
+}
+.banner .content .imgBx img {
+  width: 100%;
+  position: relative;
+  justify-content: center;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 200;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s
+}
+header.sticky {
+  background: #fff;
+  padding: 10px 100px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+header .logo{
+  font-family: 'MADE Bon Voyage';
+  color: #fff;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+}
+header.sticky .logo {
+  color:#111;
+}
+header .logo span {
+  color: #FB4C03;
+}
+header .nav {
+  position: relative;
+  display: flex;
+}
+header .nav li {
+  font-size: 1.3em;
+  list-style: none;
+  margin-left: 30px;
+}
+header .nav li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+}
+header.sticky .nav li a {
+  color:#111;
+}
+header.sticky .nav li a:hover {
+  color:#FB4C03;
+}
+section{
+  padding: 100px;
+}
+aside a {
+  color: inherit;
+}
+.expert .content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 40px;
+}
+.expert .content .box {
+  width: 250px;
+  margin: 30px;
+}
+.expert .content .box .imgBx {
+  position: relative;
+  width: 100%;
+  height: 375px;
+}
+.expert .content .box .imgBx img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.expert .content .box .text {
+  padding: 15px 0 5px;
+}
+.expert .content .box .text h3 {
+  font-weight: 700;
+  color:#111;
+}
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.titleText {
+  color: #111;
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.titleText span {
+  color: #3cafff;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+#side {
+  z-index: 100;
+  position: relative;
+  top: 80px;
+}
+.menu {
+  color:#222;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 1.1em;
+  display: flex;
+  text-align: center;
+  line-height: 1;
+  padding: 0 0.3em;
+  letter-spacing: 0.1em;
+  text-indent: 0.1em;
+  font-weight: 800;
+}
+.menu_item{
+  position: relative;
+  display: inline;
+}
+.menu_item a {
+  padding: 0.4em;
+  display: block;
+}
+.menu_item:hover .menu_sub {
+  opacity: 1;
+  pointer-events: auto;
+}
+.menu_sub:before {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: -20px;
+  right: 0;
+  height: 20px;
+}
+.menu_sub:after {
+  content: ' ';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  right: 0;
+  height: 20px;
+}
+.menu_sub {
+  border-radius: 10px;
+  background-color: rgba(83, 203, 231, 0.5);
+  text-align: center;
+  white-space: nowrap;
+  position:  relative;
+  left: 0;
+  top:0;
+  transform: translate(5%,0.6em);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 1s;
+  padding: 8px;
+}
+.menu_sub a {
+  font-size: 0.9em;
+}
+.work {
+  z-index: 50;
+}
+.simg {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  float: left;
+  margin-bottom: 120px;
+}
+@media (max-width:991px) {
+  header,
+  header.sticky{
+    padding: 10px 20px;
+  }
+  header .nav {
+    display: none;
+  }
+  header .nav.active {
+    width: 100%;
+    height: calc(100% - 60px);
+    position: fixed;
+    top: 60px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #53CBE7;
+  }
+  header .nav li {
+    margin-left: 0;
+  }
+  header .nav li a {
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 1.6em;
+    font-size: 800;
+  }
+  .menuToggle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: url(img/menu.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+  .menuToggle.active {
+    background: url(img/close.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  header.sticky .menuToggle {
+    filter: invert(1);
+  }
+  section {
+    padding: 20px;
+  }
+  .banner .content h2 {
+    padding: 20px;
+    font-size: 3em;
+    color: #0592f4;
+  }
+  .banner .content p {
+    padding: 20px;
+    font-size: 0.9em;
+    line-height:1.1em;
+    color: #0592f4;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .row .col150 {
+    position: relative;
+    width: 100%;
+  }
+  .row .col150 .imgBx{
+    height: 300px;
+    margin-top: 20px
+  }
+  .menu .content {
+    margin-top: 20px;
+  }
+  .menu .content .box {
+    margin: 10px;
+  }
+  .menu .content .box .imgBx {
+    height: 260px;
+  }
+  .title {
+    text-align: center;
+  }
+  .titleText {
+    font-size: 1.8em;
+    line-height: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 400;
+    text-align: center;
+  }
+  .temp .content {
+    padding: 0 5%;
+    margin-bottom: 100px;
+  }
+  aside .menu {
+    margin: 10px;
+  }
+  .work {
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    margin-top: 100px;
+}
+.expert {
+  position: relative;
+  width: 100%;
+}
+}
+@media (max-width:480px){
+  .banner .content h2 {
+    font-size: 2em;
+    color: #fff;
+  }
+}

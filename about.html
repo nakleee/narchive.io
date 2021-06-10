@@ -1,0 +1,138 @@
+<!DOCTYPE html><!--22061086_이나경-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NArchive</title>
+    <link rel="stylesheet" type="text/css" href="about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo"><span>NA</span>rchive</a>
+      <div class="menuToggle" onclick="toggleMenu();"></div>
+      <ul class="nav">
+        <li><a href="about.html" onclick="toggleMenu();">About</a></li>
+        <li><a href="work.html" onclick="toggleMenu();">Work</a></li>
+      </ul>
+    </header>
+    <section class="banner" id="banner">
+      <div class="content">
+        <h2>About Nak Lee</h2>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <div class="row">
+        <div class="col150">
+          <div class="imgBx">
+            <img src="img/profile.png">
+          </div>
+        </div>
+        <div class="col150">
+          <h2 class="titleText"><span>나</span>로 말할 것 같으면</h2>
+          <ul id="title_p">
+            <li>Name. 이나경</li>
+            <li>Birth Year. 1999/06</li>
+            <li>Career. 웹퍼블도 가능한 UIUX 디자이너</li>
+            <li>Contact. skrudqhrrnd@kaywon.ac.kr
+              / <br>010 - 1234 - 5678 </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="expert" id="expert">
+      <div class="title">
+        <h2 class="titleText">내가 <span>좋아하는 순간들</span></h2>
+        <p>나의 취향만 모아서!</p>
+      </div>
+      <div class="content">
+        <div class="box">
+          <div class="imgBx">
+            <img src="img/hobby1.png">
+          </div>
+          <div class="text">
+            <h3>취향의 음악을 찾았을 때</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="imgBx">
+            <img src="img/hobby2.png">
+          </div>
+          <div class="text">
+            <h3>사진으로 기록한 것을 정리할 때</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="imgBx">
+            <img src="img/hobby3.png">
+          </div>
+          <div class="text">
+            <h3>다른 나라의 거리를 걸을 때</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="temp" id="temp">
+      <div class="title white">
+        <h2 class="titleText"><span>Tool Skils</span></h2>
+        <p>이외에도 프리미어, 3d MAX, Cinema 4D로 간단한 작업 가능합니다.</p>
+      </div>
+      <div class="content">
+        <div class="skillbar">
+          <div class="bar">
+            <div class="info">
+              <span>PHOTOSHOP</span>
+            </div>
+            <div class="line ps"><span></span></div>
+          </div>
+          <div class="bar">
+            <div class="info">
+              <span>ILLUSTRATOR</span>
+            </div>
+            <div class="line ai"><span></span></div>
+          </div>
+          <div class="bar">
+            <div class="info">
+              <span>XD</span>
+            </div>
+            <div class="line xd"><span></span></div>
+          </div>
+          <div class="bar">
+            <div class="info">
+              <span>HTML</span>
+            </div>
+            <div class="line html"><span></span></div>
+          </div>
+          <div class="bar">
+            <div class="info">
+              <span>CSS</span>
+            </div>
+            <div class="line css"><span></span></div>
+          </div>
+          <div class="bar">
+            <div class="info">
+              <span>AFTEREFFECT</span>
+            </div>
+            <div class="line ae"><span></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+      window.addEventListener('scroll',function(){
+        const header = document.querySelector('header');
+        header.classList.toggle("sticky",window.scrollY > 0);
+      });
+
+      function toggleMenu(){
+        const menuToggle = document.querySelector('.menuToggle');
+        const nav = document.querySelector('.nav');
+        menuToggle.classList.toggle('active');
+        nav.classList.toggle('active');
+      }
+    </script>
+  </body>
+</html>

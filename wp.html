@@ -1,0 +1,89 @@
+<!DOCTYPE html><!--22061086_이나경-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NArchive</title>
+    <link rel="stylesheet" type="text/css" href="wp.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo"><span>NA</span>rchive</a>
+      <div class="menuToggle" onclick="toggleMenu();"></div>
+      <ul class="nav">
+        <li><a href="about.html" onclick="toggleMenu();">About</a></li>
+        <li><a href="work.html" onclick="toggleMenu();">Work</a></li>
+      </ul>
+    </header>
+
+    <main>
+      <section class="banner" id="banner">
+        <div class="content">
+          <h2>Project - 세상을 소통하는 통로, 소로 </h2>
+          <p>팀 프로젝트 <br> 수화 배움 & 소통 서비스 프로젝트 완성</p>
+        </div>
+      </section>
+
+      <aside id="side">
+        <ul class="menu">
+          <li class="menu_item"><a href="wweb.html">WEB</a></li>
+          <li class="menu_item"><a href="wp.html">PROJECT</a></li>
+          <li class="menu_item"><a href="wvc1.html">VISUAL</a>
+            <ul class="menu_sub">
+              <li><a href="wvc1.html">산돌</a></li>
+              <li><a href="wvc2.html">GOTHAM</a></li>
+            </ul>
+          </li>
+          <li class="menu_item"> <a href="#">UIUX</a>
+            <ul class="menu_sub">
+              <li><a href="wuiux1.html">Payco</a></li>
+              <li><a href="wuiux2.html">Ediya</a></li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
+      <section class="about" id="about">
+        <div class="row">
+          <div class="col150">
+            <h2 class="titleText"><span>수어</span>를 쉽게 배울 순 없을까?</h2>
+            <p>최근 등장한 음성 기반 소셜미디어와 코로나 19와 같은 재난 상황을 통해 청각장애인의 정보 접근성이 떨어진다는 문제점이 있었습니다.<br><br>
+              또 수어를 접하고 배울 수 있는 환경이 구축되어있지 않고,
+              현재 직접적인 만남이 어려운 상황에서 비대면으로 수어를 배우고, 소통할 수 있는 서비스가 필요하다 느꼈습니다.<br>
+              저희는 소로를 통해 음성기반 소셜미디어의 한계를 극복하고
+              장소에 구애받지 않고 누구나 수어를 배우고
+              농인과 청인 모두가 주체가 되는 소통의 장을 열고자 했습니다.
+            </p>
+          </div>
+          <div class="col150">
+            <div class="imgBx">
+              <img src="img/soroed.png">
+            </div>
+          </div>
+        </div>
+      </section>
+        <div class="imgbox"><img class="simg" src="img/s1.png"></div>
+      <section class="work">
+          <div class="imgbox"><img class="simg" src="img/s2.png"></div>
+          <div class="imgbox"><img class="simg" src="img/s3.png"></div>
+          <div class="imgbox"><img class="simg" src="img/s4.png"></div>
+      </section>
+      <div class="imgbox"><img class="simg" src="img/s5.png"></div>
+    </main>
+
+
+    <script type="text/javascript">
+      window.addEventListener('scroll',function(){
+        const header = document.querySelector('header');
+        header.classList.toggle("sticky",window.scrollY > 0);
+      });
+
+      function toggleMenu(){
+        const menuToggle = document.querySelector('.menuToggle');
+        const nav = document.querySelector('.nav');
+        menuToggle.classList.toggle('active');
+        nav.classList.toggle('active');
+      }
+    </script>
+  </body>
+</html>

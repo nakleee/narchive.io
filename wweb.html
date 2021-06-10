@@ -1,0 +1,92 @@
+<!DOCTYPE html><!--22061086_이나경-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NArchive</title>
+    <link rel="stylesheet" type="text/css" href="web.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo"><span>NA</span>rchive</a>
+      <div class="menuToggle" onclick="toggleMenu();"></div>
+      <ul class="nav">
+        <li><a href="about.html" onclick="toggleMenu();">About</a></li>
+        <li><a href="work.html" onclick="toggleMenu();">Work</a></li>
+      </ul>
+    </header>
+
+    <main>
+      <section class="banner" id="banner">
+        <div class="content">
+          <h2>Personal Web Archive Site : Na의 Messy 아카이빙</h2>
+          <p>개인프로젝트 <br> 20-21 미디어 아카이브 웹사이트 작업</p>
+        </div>
+      </section>
+
+      <aside id="side">
+        <ul class="menu">
+          <li class="menu_item"><a href="wweb.html">WEB</a></li>
+          <li class="menu_item"><a href="wp.html">PROJECT</a></li>
+          <li class="menu_item"><a href="wvc1.html">VISUAL</a>
+            <ul class="menu_sub">
+              <li><a href="wvc1.html">산돌</a></li>
+              <li><a href="wvc2.html">GOTHAM</a></li>
+            </ul>
+          </li>
+          <li class="menu_item"> <a href="#">UIUX</a>
+            <ul class="menu_sub">
+              <li><a href="wuiux1.html">Payco</a></li>
+              <li><a href="wuiux2.html">Ediya</a></li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
+      <section class="about" id="about">
+        <div class="row">
+          <div class="col150">
+            <div class="imgBx">
+              <img src="img/web11.png">
+            </div>
+          </div>
+          <div class="col150">
+            <h2 class="titleText">나의 <span>Messy</span> 아카이빙</h2>
+            <p>20-21 나카이브는 나의 최근 1년간의 미디어 기록 아카이브를 제작해 내가 본 콘텐츠를 정리해줬다. <br>
+              과제에 치이면서 집콕하는 동안 영상이나 음악 등 20대 초반 나의 데이터를 아카이빙해서
+              나중에도 보면 재밌을 것 같아 약간의 감상도 적어주었다.</p>
+          </div>
+        </div>
+      </section>
+      <div class="title">
+        <a href="https://nakleee.github.io/" class="btn">사이트로 이동</a>
+      </div>
+      <section class="work">
+          <div class="imgbox"><img class="simg" src="img/web2.png"></div>
+      </section>
+      <section class="work">
+          <div class="imgbox"><img class="simg2" src="img/web3.png"></div>
+          <div class="imgbox"><img class="simg2" src="img/web4.png"></div>
+      </section>
+      <section class="work">
+          <div class="imgbox"><img class="simg2" src="img/web5.png"></div>
+          <div class="imgbox"><img class="simg2" src="img/web6.png"></div>
+      </section>
+    </main>
+
+
+    <script type="text/javascript">
+      window.addEventListener('scroll',function(){
+        const header = document.querySelector('header');
+        header.classList.toggle("sticky",window.scrollY > 0);
+      });
+
+      function toggleMenu(){
+        const menuToggle = document.querySelector('.menuToggle');
+        const nav = document.querySelector('.nav');
+        menuToggle.classList.toggle('active');
+        nav.classList.toggle('active');
+      }
+    </script>
+  </body>
+</html>
