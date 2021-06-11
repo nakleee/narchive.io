@@ -20,7 +20,7 @@ ul {  list-style-type: none; }
   width: 100%;
   min-height: 90vh;
   display: flex;
-  background-image: url(./uiux2.PNG);
+  background-image: url(./uiux2.png);
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
